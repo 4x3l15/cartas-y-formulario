@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import Card from "./card";
+import Card from "./Card";
 import "./App.css";
 function App() {
+  
 
 
 	return (
