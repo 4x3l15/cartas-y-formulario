@@ -32,8 +32,8 @@ function MyCard() {
                     <div className="card-content">
                         <img className="imgCard" src={cancion.imagen} alt={cancion.edad} />
                         <h2>{cancion.nombre}</h2>
-                        <p>Artista: {cancion.artista}</p>
-                        <p>Duración: {cancion.duración}</p>
+                        <p>Artista: {cancion.Artista}</p>
+                        <p>Duración: {cancion.Duración}</p>
                     </div>
                     <button className="btnLike" onClick={() => handleLike(cancion.id)}>
                         Le diste like {cancion.likes || 0} veces
