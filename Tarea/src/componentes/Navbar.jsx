@@ -12,13 +12,13 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Escudo_Talleres_2015.svg/893px-Escudo_Talleres_2015.svg.png' alt="Logo" className="logo" />
-        <h1 className="navbar-title">Talleres</h1>
+        <img src='https://upload.wikimedia.org/wikipedia/en/8/85/Mar%C3%ADa_Becerra_-_La_Nena_de_Argentina.jpg' alt="Logo" className="logo" />
+        <h1 className="navbar-title">LA NENA DE ARGENTINA</h1>
         <div className="search-container">
           <input
             type="text"
             className="search-input"
-            placeholder="Buscar jugadores..."
+            placeholder="Buscar cancion..."
             onChange={handleSearch}
           />
           {/* Agrega un icono o botón de búsqueda si es necesario */}

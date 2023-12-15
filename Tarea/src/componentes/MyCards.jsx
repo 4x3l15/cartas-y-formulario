@@ -3,44 +3,44 @@ import React, { useContext } from "react";
 import { Contexto } from "../context/MiProvider";
 
 function MyCard() {
-    const { jugadores, setJugadores, busqueda } = useContext(Contexto);
+    const { canciones, setcanciones, busqueda } = useContext(Contexto);
 
-    // Filtrar jugadores según la búsqueda
-    const jugadoresFiltrados = jugadores.filter((jugador) =>
-        jugador.nombre.toLowerCase().includes(busqueda.toLowerCase())
+    // Filtrar canciones según la búsqueda
+    const cancionesFiltrados = canciones.filter((cancion) =>
+        cancion.nombre.toLowerCase().includes(busqueda.toLowerCase())
     );
 
     function handleLike(id) {
-        const updatedJugadores = jugadores.map((jugador) => {
-            if (jugador.id === id) {
-                return { ...jugador, likes: (jugador.likes || 0) + 1 };
+        const updatedcanciones = canciones.map((cancion) => {
+            if (cancion.id === id) {
+                return { ...cancion, likes: (cancion.likes || 0) + 1 };
             }
-            return jugador;
+            return cancion;
         });
-        setJugadores(updatedJugadores);
+        setcanciones(updatedcanciones);
     }
 
     function handleDelete(id) {
-        const updatedJugadores = jugadores.filter((jugador) => jugador.id !== id);
-        setJugadores(updatedJugadores);
+        const updatedcanciones = canciones.filter((cancion) => cancion.id !== id);
+        setcanciones(updatedcanciones);
     }
 
     return (
         <div className="card-container">
-            {jugadoresFiltrados.map((jugador) => (
-                <div key={jugador.id} className="card">
+            {cancionesFiltrados.map((cancion) => (
+                <div key={cancion.id} className="card">
                     <div className="card-content">
-                        <img className="imgCard" src={jugador.imagen} alt={jugador.edad} />
-                        <h2>{jugador.nombre}</h2>
-                        <p>Edad: {jugador.edad}</p>
-                        <p>Posición: {jugador.posicion}</p>
-                        <p>Nacionalidad: {jugador.nacionalidad}</p>
-                        <p>Dorsal: {jugador.dorsal}</p>
+                        <img className="imgCard" src={cancion.imagen} alt={cancion.edad} />
+                        <h2>{cancion.nombre}</h2>
+                        <p>Artista {cancion.edad}</p>
+                        <p>Posición: {cancion.posicion}</p>
+                        <p>Nacionalidad: {cancion.nacionalidad}</p>
+                        <p>Dorsal: {cancion.dorsal}</p>
                     </div>
-                    <button className="btnLike" onClick={() => handleLike(jugador.id)}>
-                        Le diste like {jugador.likes || 0} veces
+                    <button className="btnLike" onClick={() => handleLike(cancion.id)}>
+                        Le diste like {cancion.likes || 0} veces
                     </button>
-                    <button className="btnElim" onClick={() => handleDelete(jugador.id)}>
+                    <button className="btnElim" onClick={() => handleDelete(cancion.id)}>
                         Eliminar
                     </button>
                 </div>
