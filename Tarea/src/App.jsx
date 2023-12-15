@@ -11,7 +11,7 @@ function App() {
         <div>
             <MiProvider> 
                 <Navbar />
-                <h1>Bienvenido a taiere locura</h1>
+                <h1>Album LNDA</h1>
                 <MyCard />
            </MiProvider>
       </div>
